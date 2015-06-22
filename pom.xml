@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ethanaa</groupId>
+	<artifactId>head-honcho</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Head Honcho</name>
+	<description>Rapid prototype in JavaFX w/ Artemis</description>
+
+	<properties>
+		<exec.mainClass>com.ethanaa.headhoncho.Main</exec.mainClass>
+		<javafx.min.version>2.2</javafx.min.version>
+		<jdk.home>C:\Program Files\Java\jdk1.8.0</jdk.home>
+		<javafx.runtime.lib.jar>${jdk.home}/jre/lib/ext/jfxrt.jar</javafx.runtime.lib.jar>
+		<javafx.tools.ant.jar>${jdk.home}/lib/ant-javafx.jar</javafx.tools.ant.jar>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<!-- Graphics 
+		<dependency>
+			<groupId>javafx</groupId>
+			<artifactId>jfxrt</artifactId>
+			<version>${javafx.min.version}</version>
+			<scope>system</scope>
+			<systemPath>${javafx.runtime.lib.jar}</systemPath>
+		</dependency>
+		-->
+
+		<!-- Entity System -->
+		<dependency>
+			<groupId>net.onedaybeard.artemis</groupId>
+			<artifactId>artemis-odb</artifactId>
+			<version>0.8.1</version>
+		</dependency>
+
+		<!-- Image Manipulation -->
+		<dependency>
+			<groupId>org.jclarion</groupId>
+			<artifactId>image4j</artifactId>
+			<version>0.7</version>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<finalName>HeadHoncho</finalName>
+
+		<plugins>
+
+			<plugin>
+
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>2.0</version>
+
+				<configuration>
+					<verbose>true</verbose>
+
+					<mainClass>com.ethanaa.headhoncho.Main</mainClass>
+					<vendor>ethanaa.com</vendor>
+
+					<embeddedHeight>900</embeddedHeight>
+					<embeddedWidth>1600</embeddedWidth>
+
+					<jvmProperties>
+						<java.library.path>.</java.library.path>
+						<javafx.autoproxy.disable>true</javafx.autoproxy.disable>
+					</jvmProperties>
+
+					<allPermissions>true</allPermissions>
+					<keyStore>src/main/deploy/keystore.jks</keyStore>
+					<keyStoreAlias>ethanaa</keyStoreAlias>
+					<keyStorePassword>ethanaa</keyStorePassword>
+					<certCountry>US</certCountry>
+					<certDomain>com.ethanaa</certDomain>
+					<certOrg>ethanaa.com</certOrg>
+					<certState>Minnesota</certState>
+				</configuration>
+
+			</plugin>
+
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+
+			</plugin>
+
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>

@@ -1,0 +1,141 @@
+.root {
+	-fx-background-color: derive(antiquewhite, 10%);
+}
+
+.splash-scene {
+	-fx-background-color: derive(antiquewhite, 10%);
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0px .75em to .75em 0px,
+        repeat,
+        -fx-accent 0%,
+        -fx-accent 49%,
+        derive(-fx-accent, 30%) 50%,
+        derive(-fx-accent, 30%) 99%
+    );
+}
+
+.drop-shadow {
+	-fx-effect: dropshadow(three-pass-box, derive(black, -20%), 10, 0, 3, 3);	
+}
+
+.hand-anchor {
+	-fx-alignment: center;	
+}
+
+.zoom-layer {
+	-fx-background-color: rgba(0, 100, 100, 0.5);
+}
+
+.opponent-hand {
+	-fx-background-color: derive(burlywood, 10%);
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.opponent-village {
+	-fx-background-color: derive(mediumslateblue, 10%);
+}
+
+.opponent-front-line {
+
+}
+
+.opponent-front-line-left {
+	-fx-background-color: derive(darkorange, 10%);
+	-fx-padding: 20px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.opponent-commander {
+	-fx-padding: 20px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.opponent-front-line-right {
+	-fx-background-color: derive(darkorange, 10%);
+	-fx-padding: 20px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;
+}
+
+.invasion {
+	-fx-background-color: derive(firebrick, 10%);
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.front-line {
+
+}
+
+.front-line-left {
+	-fx-background-color: derive(darkorange, 10%);
+	-fx-padding: 20px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.commander {
+	-fx-padding: 20px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.front-line-right {
+	-fx-background-color: derive(darkorange, 10%);
+	-fx-padding: 20px;
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.village {
+	-fx-background-color: derive(mediumslateblue, 10%);
+}
+
+.hand {
+	-fx-background-color: derive(burlywood, 10%);
+	-fx-border-width: 1px;
+	-fx-border-color: black;	
+}
+
+.card {
+	-fx-background-color: derive(cyan, 10%);
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-background-insets: 6.0;
+	-fx-border-insets: 5.0;
+	-fx-border-radius: 3.0;
+	-fx-background-radius: 3.0;	
+}
+
+.card:pressed {
+	-fx-cursor: move;
+}
+
+.card:hover {
+	-fx-border-color: yellow;
+	-fx-border-width: 4px;
+}
+
+.card-stats {
+	-fx-background-color: derive(slategrey, 10%);
+	-fx-border-width: 0, 1, 0, 0px;
+	-fx-border-color: black;	
+}
+
+.card-banish {
+	-fx-background-color: derive(firebrick, 10%);	
+}
+
+.card-art {
+	-fx-background-color: derive(honeydew, 10%);	
+}
+
+.card-effects {
+	-fx-background-color: derive(burlywood, 10%);	
+}

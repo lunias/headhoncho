@@ -1,0 +1,38 @@
+.root {
+-fx-glass-color: rgba(95.0, 158.0, 160.0, 0.9);
+}
+ 
+.modal-dialog {
+-fx-padding: 20.0;
+-fx-spacing: 10.0;
+-fx-alignment: center;
+-fx-font-size: 20.0;
+-fx-background-color: linear-gradient(to bottom, derive(-fx-glass-color, 20.0%), -fx-glass-color);
+-fx-border-color: derive(-fx-glass-color, -20.0%);
+-fx-border-width: 2.0;
+-fx-background-insets: 12.0;
+-fx-border-insets: 10.0;
+-fx-border-radius: 6.0;
+-fx-background-radius: 6.0;
+-fx-effect: dropshadow(three-pass-box, derive(black, -20%), 10, 0, 3, 3);
+}
+ 
+.modal-dialog:pressed {
+-fx-cursor: move;
+}
+ 
+.modal-dialog .button:pressed {
+-fx-cursor: default;
+}
+
+.draft-modal-opponent-resources {
+	-fx-background-color: derive(honeydew, 10%);	
+}
+
+.draft-modal-draftable-cards {
+	-fx-background-color: derive(slategrey, 10%);
+}
+
+.draft-modal-player-resources {
+	-fx-background-color: derive(honeydew, 10%);
+}
